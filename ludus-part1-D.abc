@@ -1,0 +1,73 @@
+%%scale .60
+%%pagewidth	8.5in
+%%barsperstaff	8 % number of measures per staff
+%%equalbars true
+%%measurebox false % measure numbers in a box
+%%measurenb	1
+%%leftmargin 3cm
+X:1
+T:
+%%setfont-1 Courier-Bold 12
+%%setfont-2 Courier-Bold 22
+%%setfont-3 Courier-Bold 16
+%%setfont-4 Courier-Bold-Italic 19
+%%musicspace 1cm
+T:$4Ludus Melothedicus (Part I)$0
+C:  %empty line
+C: Paris: La Chevardi\`ere, 1759
+S:
+M:3/4
+L:1/8
+Q:1/8=120
+P: 1.2.3.4.5.6.7.8.9
+V:1 clef=treble 
+V:2 clef=bass 
+K:D
+%
+%%MIDI program 1 40       % Instrument 41 Violin
+%%MIDI program 2 42       % Instrument 43 Cello
+[P:$31$0]
+[V:1]
+d=e^f2g2"@-75,10 $3Bar 1$0" | ^fg{=a}g2^f2"@-75,25 $3Bar 2$0" | a2^f2d2"@-65,30 $3Bar 3$0" | {d}^c4A2"@-75,38 $3Bar 4$0" | (3=B^cA =BG=e2"@-90,30 $3Bar 5$0" | ^c=a=E gd2"@-75,33 $3Bar 6$0" | A=B^c2d=e"@-80,30 $3Bar 7$0" | e6"@-75,25 $3Bar 8$0" || 
+[V:2]
+D,2^F,2^C,2 | D,2A,,2D,2 | D,2^F,2D,2 | A,2G,2^F,2 | G,2G,2G,2 | A,,2^C,2D,2 | ^C,2=E,2D,2 | A,,2A,,=B,,^C,A,, || 
+[P:$32$0]
+[V:1]
+dAd^f=eg | =a^cd4 | =e2g^f=ed | ^c2=B^cA2 | {=a}g4=ed | ^c2=B^cd2 | A2g=e^fd | e6 || 
+[V:2]
+D,2^F,2^C,2 | D,2=E,2^F,2 | G,2=E,2G,2 | A,2G,2^F,2 | =E,2^C,2=B,,2 | A,2G,2^F,2 | ^C,2=E,2D,2 | A,2=E,2A,,2 || 
+[P:$33$0]
+[V:1]
+DdA^FDA, | ^f{=e}d^c2d2 | ^f=ag=e=B=e | ^c2=B^cA2 | =B2G2=e2 | ^c=BA=e^f2 | A,g^fd^cd | {^f}[Ae]6 || 
+[V:2]
+D,2^F,2D,2 | D,2=E,2^F,2 | D,2^F,2G,2 | A,2G,2^F,2 | G,2G,2G,2 | A,,2^C,2D,2 | ^C,2D,2G,2 | A,2^F,A,,=B,,^C, || 
+[P:$34$0]
+[V:1]
+d2ddd=e | A2=B^cd2 | =Bg=e^fg=B | ^cA=E ^C=A,2 | [G=B]2[G=B][G=B][G=B][G=B] | ^c2=BAd2 | A2g^f_a=e | {^f}[Ae]6 || 
+[V:2]
+D,2^F,2D,2 | ^C,2A,,2D,2 | G,2z2G,2 | A,2=E,2A,,2 | G,^F,=E,4 | A,2G,2^F,2 | ^C,2D,2G,2 | A,2A,G,^F,=E, || 
+[P:$35$0]
+[V:1]
+A2d=e{^f}=e2 | ^fd^cAd2 | D^FG=E =ed | ^c2=e^GA2 | =B2=eg=ed | ^c=B^cAd2 | =A,2g2^f2 | e6 || 
+[V:2]
+D,=E,^F,2^C,2 | D,2A,,2D,2 | D,2=E,2G,2 | A,2=E,2A,,2 | G,2G,2G,2 | A,2G,2^F,2 | ^C,2=E,2D,2 | A,,2A,,=B,,^C,A,, || 
+[P:$36$0]
+[V:1]
+Ad^f=ag2 | ^f=a^c=ed2 | A2=BG=Bd | ^c2^G=BA2 | =B2g4 | ^c=e^cAd2 | =BAG2^Fd | e6 || 
+[V:2]
+D,2D,2=E,2 | D,2=E,2^F,2 | D,2G,2z2 | A,2=E,2A,,2 | zG,=E,D,^C,=B,, | A,2G,2^F,2 | G,2=E,2D,2 | A,2zA,,=B,,^C, || 
+[P:$37$0]
+[V:1]
+D^FAd^f=a | A^c=eg^f2 | a2^fd=B=e | ^c2 (3d^cd= e2 | G2=e^fg=e | ^c=e^cAd2 | ^f=bdA^cd | e6 || 
+[V:2]
+D,2^F,2D,2 | ^C,2A,,2D,2 | D,2^F,2G,2 | A,2=E,2A,,2 | =E,2G,2G,2 | A,2G,2^F,2 | =E,2G,2G,2 | A,2=E,2A,,2 || 
+[P:$38$0]
+[V:1]
+D2d2=e2 | {g}^f4=e2 | a2(3g=a^f (3=e^fd | ^c2d^f=e2 | g^f=b2=ed | {d}^c4d2 | (3=b=agg2^fd | e6 || 
+[V:2]
+D,=E,^F,2^C,2 | D,2^C,2A,,2 | D,2=E,2G,2 | A,2=E,2A,,2 | ^C,2A,,2D,2 | z^CA,G,^F,D, | G,2=E,2D,2 | A,2A,G,^F,=E, || 
+[P:$39$0]
+[V:1]
+d2d=e^fg | ^f2^c2d2 | ^f2g^f=ed | ^cd=e^GA2 | =B4g{^f}=e | ^cAG=E ^Fd | =eAg2(3^fg=a | [Ae]6 || 
+[V:2]
+D,=E,^F,2^C,2 | D,2=E,2^F,2 | D,2^F,2G,2 | A,2=E,2A,,2 | z=B,G,^F,=E,2 | A,,2^C,2D,2 | ^C,2=E,2D,2 | A,2=E,2A,,2 || 
