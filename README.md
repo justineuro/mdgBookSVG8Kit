@@ -22,7 +22,7 @@ To download and examine an example of a book (`mdgBookSVG8v1.pdf`) that was gene
 
 [![Front Cover](./mdgBookSVG8v1-tit.png)](https://justineuro.github.io/mdgBookSVG8Kit/mdgBookSVG8v1.pdf)
 
-(**Note**: To enable the MIDI audio links in the book, one should download [ldmt-v1-midi.zip](https://justineuro.github.io/mdgBookSVGKit/ldmt-v1-midis.zip) and unzip in the same directory in one's computer that contains the book, i.e., the book and midi files have to be in the same directory).
+(**Note**: To enable the MIDI audio links in the book, one should download [ldmt-v1-midi.zip](https://justineuro.github.io/mdgBookSVG8Kit/ldmt-v1-midis.zip) and unzip in the same directory in one's computer that contains the book, i.e., the book and midi files have to be in the same directory).
 
 
 ## License
