@@ -6,7 +6,7 @@
 
 **Here's an opportunity for one to "compose" Rondos and to author a Collection Book of such!!!** 
 
-This folder contains materials that allow the user to author a book containing a collection of [Musical Dice Games (MDG)](https://en.wikipedia.org/wiki/Musikalisches_W%C3%BCrfelspiel) minuets, generated based on the rules given in ][*Ludus Melothedicus  2nd Ed. (1759)*](https://imslp.org/wiki/Ludus_Melothedicus_(Anonymous)).  
+This folder contains materials that allow the user to author a book containing a collection of [Musical Dice Games (MDG)](https://en.wikipedia.org/wiki/Musikalisches_W%C3%BCrfelspiel) minuets, generated based on the rules given in [*Ludus Melothedicus  2nd Ed. (1759)*](https://imslp.org/wiki/Ludus_Melothedicus_(Anonymous)).  
 
 To creat a book, simply [download](https://github.com/justineuro/mdgBookSVG8Kit/archive/main.zip) (or clone: `git clone https://github.com/justineuro/mdgBookSVG8Kit.git`) this project to one's computer, unzip the downloaded archive, and at the command line inside the main folder (`mdgBookSVG8Kit` or `mdgBookSVG8Kit-main` directory) issue the following command (pre-requisites: `bash`, `abcmidi`, `abcm2ps`, `Ghostscript`, `Inkscape`, and `LaTeX`):
 
