@@ -1,9 +1,9 @@
 #!/bin/bash
 #===================================================================================
 #
-#	 FILE:	ldmt2mid+svg.sh
+#	 FILE:	mdg82mid+svg.sh
 #
-#	USAGE:	ldmt2mid+svg.sh n1 n2 n3 n4 n5 n6 n7 n8 n9 n10 n11 n12 n13 n14 n15 16
+#	USAGE:	mdg82mid+svg.sh n1 n2 n3 n4 n5 n6 n7 n8 n9 n10 n11 n12 n13 n14 n15 16
 #
 #		where n1-n16 are any of the 9 possible integers from the set {1,2, 3, 4, 5, 6, 7, 8, 9}
 #
@@ -11,10 +11,10 @@
 #		of a particular Musical Dice Game (MDG) minuet based on Ludus Melothedicus
 #
 #      AUTHOR:	J.L.A. Uro (justineuro@gmail.com)
-#     VERSION:	0.0.0
+#     VERSION:	0.0.1
 #     LICENSE:	Creative Commons Attribution 4.0 International License (CC-BY)
-#     CREATED:	2021/02/21 16:39:292025/05/05 16:20:33
-#    REVISION:	
+#     CREATED:	2025/05/05 16:20:33
+#    REVISION:	2025/05/11 19:25:07
 #==================================================================================
 
 #----------------------------------------------------------------------------------
@@ -60,13 +60,13 @@ declare -a notesG notesF
 #----------------------------------------------------------------------------------
 # define notesS1G, array of 72 possible measures of treble clef notes for Part I
 #----------------------------------------------------------------------------------
-notesS1G=("d=e^f2g2" "^fg{=a}g2^f2" "a2^f2d2" "{d}^c4A2" "(3=B^cA =BG=e2" "^c=a=E gd2" "A=B^c2d=e" "e6" "dAd^f=eg" "=a^cd4" "=e2g^f=ed" "^c2=B^cA2" "{=a}g4=ed" "^c2=B^cd2" "A2g=e^fd" "e6" "DdA^FDA," "^f{=e}d^c2d2" "^f=ag=e=B=e" "^c2=B^cA2" "=B2G2=e2" "^c=BA=e^f2" "A,g^fd^cd" "{^f}[Ae]6" "d2ddd=e" "A2=B^cd2" "=Bg=e^fg=B" "^cA=E ^C=A,2" "[G=B]2[G=B][G=B][G=B][G=B]" "^c2=BAd2" "A2g^f_a=e" "{^f}[Ae]6" "A2d=e{^f}=e2" "^fd^cAd2" "D^FG=E =ed" "^c2=e^GA2" "=B2=eg=ed" "^c=B^cAd2" "=A,2g2^f2" "e6" "Ad^f=ag2" "^f=a^c=ed2" "A2=BG=Bd" "^c2^G=BA2" "=B2g4" "^c=e^cAd2" "=BAG2^Fd" "e6" "D^FAd^f=a" "A^c=eg^f2" "a2^fd=B=e" "^c2 (3d^cd=e2" "G2=e^fg=e" "^c=e^cAd2" "^f=bdA^cd" "e6" "D2d2=e2" "{g}^f4=e2" "a2(3g=a^f (3=e^fd" "^c2d^f=e2" "g^f=b2=ed" "{d}^c4d2" "(3=b=agg2^fd" "e6" "d2d=e^fg" "^f2^c2d2" "^f2g^f=ed" "^cd=e^GA2" "=B4g{^f}=e" "^cAG=E ^Fd" "=eAg2(3^fg=a" "[Ae]6")
+notesS1G=("d=e^f2g2" "^fg{=a}g2^f2" "a2^f2d2" "{d}^c4A2" "(3=B^cA =BG=e2" "^c=a=E gd2" "A=B^c2d=e" "e6" "dAd^f=eg" "=a^cd4" "=e2g^f=ed" "^c2=B^cA2" "{=a}g4=ed" "^c2=B^cd2" "A2g=e^fd" "e6" "DdA^FDA," "^f{=e}d^c2d2" "^f=ag=e=B=e" "^c2=B^cA2" "=B2G2=e2" "^c=BA=e^f2" "A,g^fd^cd" "{^f}[Ae]6" "d2ddd=e" "A2=B^cd2" "=Bg=e^fg=B" "^cA=E ^C=A,2" "[G=B]2[G=B][G=B][G=B][G=B]" "^c2=BAd2" "A2g^f_a=e" "{^f}[Ae]6" "A2d=e{^f}=e2" "^fd^cAd2" "D^FG=E =ed" "^c2=e^GA2" "=B2=eg=ed" "^c=B^cAd2" "=A,2g2^f2" "e6" "Ad^f=ag2" "^f=a^c=ed2" "A2=BG=Bd" "^c2^G=BA2" "=B2g4" "^c=e^cAd2" "=BAG2^Fd" "e6" "D^FAd^f=a" "A^c=eg^f2" "a2^fd=B=e" "^c2 (3d^cd=e2" "G2=e^fg=e" "{d}^c4d2" "^f=bdA^cd" "e6" "D2d2=e2" "{g}^f4=e2" "a2(3g=a^f (3=e^fd" "^c2d^f=e2" "g^f=b2=ed" "^cAG=E ^Fd" "(3=b=agg2^fd" "e6" "d2d=e^fg" "^f2^c2d2" "^f2g^f=ed" "^cd=e^GA2" "=B4g{^f}=e" "^c=eA,^cd2" "=eAg2(3^fg=a" "[Ae]6")
 #echo ${notesS1G[71]}
 
 #----------------------------------------------------------------------------------
 # define notesS1F, array of 72 possible measures bass clef notes for Part I
 #----------------------------------------------------------------------------------
-notesS1F=("D,2^F,2^C,2" "D,2A,,2D,2" "D,2^F,2D,2" "A,2G,2^F,2" "G,2G,2G,2" "A,,2^C,2D,2" "^C,2=E,2D,2" "A,,2A,,=B,,^C,A,," "D,2^F,2^C,2" "D,2=E,2^F,2" "G,2=E,2G,2" "A,2G,2^F,2" "=E,2^C,2=B,,2" "A,2G,2^F,2" "^C,2=E,2D,2" "A,2=E,2A,,2" "D,2^F,2D,2" "D,2=E,2^F,2" "D,2^F,2G,2" "A,2G,2^F,2" "G,2G,2G,2" "A,,2^C,2D,2" "^C,2D,2G,2" "A,2^F,A,,=B,,^C," "D,2^F,2D,2" "^C,2A,,2D,2" "G,2z2G,2" "A,2=E,2A,,2" "G,^F,=E,4" "A,2G,2^F,2" "^C,2D,2G,2" "A,2A,G,^F,=E," "D,=E,^F,2^C,2" "D,2A,,2D,2" "D,2=E,2G,2" "A,2=E,2A,,2" "G,2G,2G,2" "A,2G,2^F,2" "^C,2=E,2D,2" "A,,2A,,=B,,^C,A,," "D,2D,2=E,2" "D,2=E,2^F,2" "D,2G,2z2" "A,2=E,2A,,2" "zG,=E,D,^C,=B,," "A,2G,2^F,2" "G,2=E,2D,2" "A,2zA,,=B,,^C," "D,2^F,2D,2" "^C,2A,,2D,2" "D,2^F,2G,2" "A,2=E,2A,,2" "=E,2G,2G,2" "A,2G,2^F,2" "=E,2G,2G,2" "A,2=E,2A,,2" "D,=E,^F,2^C,2" "D,2^C,2A,,2" "D,2=E,2G,2" "A,2=E,2A,,2" "^C,2A,,2D,2" "z^CA,G,^F,D," "G,2=E,2D,2" "A,2A,G,^F,=E," "D,=E,^F,2^C,2" "D,2=E,2^F,2" "D,2^F,2G,2" "A,2=E,2A,,2" "z=B,G,^F,=E,2" "A,,2^C,2D,2" "^C,2=E,2D,2" "A,2=E,2A,,2")
+notesS1F=("D,2^F,2^C,2" "D,2A,,2D,2" "D,2^F,2D,2" "A,2G,2^F,2" "G,2G,2G,2" "A,,2^C,2D,2" "^C,2=E,2D,2" "A,,2A,,=B,,^C,A,," "D,2^F,2^C,2" "D,2=E,2^F,2" "G,2=E,2G,2" "A,2G,2^F,2" "=E,2^C,2=B,,2" "A,2G,2^F,2" "^C,2=E,2D,2" "A,2=E,2A,,2" "D,2^F,2D,2" "D,2=E,2^F,2" "D,2^F,2G,2" "A,2G,2^F,2" "G,2G,2G,2" "A,,2^C,2D,2" "^C,2D,2G,2" "A,2^F,A,,=B,,^C," "D,2^F,2D,2" "^C,2A,,2D,2" "G,2z2G,2" "A,2=E,2A,,2" "G,^F,=E,4" "A,2G,2^F,2" "^C,2D,2G,2" "A,2A,G,^F,=E," "D,=E,^F,2^C,2" "D,2A,,2D,2" "D,2=E,2G,2" "A,2=E,2A,,2" "G,2G,2G,2" "A,2G,2^F,2" "^C,2=E,2D,2" "A,,2A,,=B,,^C,A,," "D,2D,2=E,2" "D,2=E,2^F,2" "D,2G,2z2" "A,2=E,2A,,2" "zG,=E,D,^C,=B,," "A,2G,2^F,2" "G,2=E,2D,2" "A,2zA,,=B,,^C," "D,2^F,2D,2" "^C,2A,,2D,2" "D,2^F,2G,2" "A,2=E,2A,,2" "=E,2G,2G,2" "z^CA,G,^F,D," "=E,2G,2G,2" "A,2=E,2A,,2" "D,=E,^F,2^C,2" "D,2^C,2A,,2" "D,2=E,2G,2" "A,2=E,2A,,2" "^C,2A,,2D,2" "A,,2^C,2D,2" "G,2=E,2D,2" "A,2A,G,^F,=E," "D,=E,^F,2^C,2" "D,2=E,2^F,2" "D,2^F,2G,2" "A,2=E,2A,,2" "z=B,G,^F,=E,2" "A,2G,2^F,2" "^C,2=E,2D,2" "A,2=E,2A,,2")
 #echo ${notesS1F[71]}
 
 #----------------------------------------------------------------------------------
@@ -96,12 +96,19 @@ EOT
 #----------------------------------------------------------------------------------
 fileInd=$1-$2-$3-$4-$5-$6-$7-$8-$9-${10}-${11}-${12}-${13}-${14}-${15}-${16}
 filen="ldmt-$fileInd.abc"
-dbNum=$(( 1 + (${diceS1[0]}-1) + (${diceS1[1]}-1)*9 + (${diceS1[2]}-1)*9**2 + (${diceS1[3]}-1)*9**3 + (${diceS1[4]}-1)*9**4 + (${diceS1[5]}-1)*9**5 + (${diceS1[6]}-1)*9**6 + (${diceS1[7]}-1)*9**7 + (${diceS2[0]}-1)*9**8 + (${diceS2[1]}-1)*9**9 + (${diceS2[2]}-1)*9**10 + (${diceS2[3]}-1)*9**11 + (${diceS2[4]}-1)*9**12 + (${diceS2[5]}-1)*9**13 + (${diceS2[6]}-1)*9**14 + (${diceS2[7]}-1)*9**15 ))
-echo $dbNum
 
 #-----------------------------------------------------------------------------------------------------
 # calculate permutation number for the current dice toss (from 9^8*9^8 = 1,853,020,188,851,841 possibilities)
+# Unique: 9^7*7 * 9^7*6 = 960,825,283,108,362
+# part I, measure 8: 1=5, 2=7
+# part II, measure 8: 1=6, 2=7, 4=9
 #-----------------------------------------------------------------------------------------------------
+dbNum=$(( 1 + (${diceS1[0]}-1) + (${diceS1[1]}-1)*9 + (${diceS1[2]}-1)*9**2 + (${diceS1[3]}-1)*9**3 + (${diceS1[4]}-1)*9**4 + (${diceS1[5]}-1)*9**5 + (${diceS1[6]}-1)*9**6 + (${diceS1[7]}-1)*9**7 + (${diceS2[0]}-1)*9**8 + (${diceS2[1]}-1)*9**9 + (${diceS2[2]}-1)*9**10 + (${diceS2[3]}-1)*9**11 + (${diceS2[4]}-1)*9**12 + (${diceS2[5]}-1)*9**13 + (${diceS2[6]}-1)*9**14 + (${diceS2[7]}-1)*9**15 ))
+echo $dbNum
+
+#----------------------------------------------------------------------------------
+# determine the sequence of bar numbers to be played for Parts I and II
+#----------------------------------------------------------------------------------
 measPerm1=""
 measPerm2=""
 measPerm=""
@@ -123,7 +130,6 @@ measPerm="$measPerm1:$measPerm2:"
 if [ -f $filen ]; then 
 	mv $filen $filen."bak"
 fi
-
 
 #----------------------------------------------------------------------------------
 # generate the header of the ABC file
@@ -155,24 +161,24 @@ K:D
 # write the notes of the ABC file
 #----------------------------------------------------------------------------------
 p1V1="";p1V2=""
-p2V1="";p1V2=""
+p2V1="";p2V2=""
 for col in 1 2 3 4 5 6 7; do
 	#for Part I
-	ruletab $diceS1[col-1]
+	ruletab ${diceS1[$col-1]}
 	measN=${measNR[$col-1]}
 	p1V1=${p1V1}" "${notesS1G[$measN-1]}" |"
 	p1V2=${p1V2}" "${notesS1F[$measN-1]}" |"
 	#for Part II
-	ruletab $diceS2[col-1]
+	ruletab ${diceS2[$col-1]}
 	measN=${measNR[$col-1]}
 	p2V1=${p2V1}" "${notesS2G[$measN-1]}" |"
 	p2V2=${p2V2}" "${notesS2F[$measN-1]}" |"
 done
 # add the 8th bar
-ruletab $diceS1[7]
+ruletab ${diceS1[7]}
 p1V1=${p1V1}" "${notesS1G[${measNR[7]}-1]}" :|"
 p1V2=${p1V2}" "${notesS1F[${measNR[7]}-1]}" :|"
-ruletab $diceS2[7]
+ruletab ${diceS2[7]}
 p2V1=${p2V1}" "${notesS2G[${measNR[7]}-1]}" :|]"
 p2V2=${p2V2}" "${notesS2F[${measNR[7]}-1]}" :|]"
 

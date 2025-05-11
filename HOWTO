@@ -17,7 +17,7 @@
 	mkdir bin images res
 	mv *.sh bin
 	mv 1ed.png images; mv FrontCover.pdf images
-	mv ludus-*.abc res
+	mv ludus-*.abc res; mv ludus9-D-m1.pdf res 
 	mv hyperref.cfg res; mv mdg8.bib res
 	mv *.tex res
 
@@ -45,15 +45,6 @@
 	sed -i 's/\\textbf{ldmt/\\footnotesize \\tt {ldmt/g' ldmt-*.pdf_tex
 	sed -i 's/\\textbf{:/\\footnotesize \\tt {:/g' ldmt-*.pdf_tex
 	sed -i 's/\\textbf{Perm\./\\footnotesize \\tt {Perm\.\\/' ldmt-*.pdf_tex
-#	sed -i 's/{l}1\\end/{l} \\tt 1\\end/g' ldmt-*.pdf_tex
-#	sed -i 's/{l}2\\end/{l}\\tt 2\\end/g' ldmt-*.pdf_tex
-#	sed -i 's/{l}3\\end/{l}\\tt 3\\end/g' ldmt-*.pdf_tex
-#	sed -i 's/{l}4\\end/{l}\\tt 4\\end/g' ldmt-*.pdf_tex
-#	sed -i 's/{l}5\\end/{l}\\tt 5\\end/g' ldmt-*.pdf_tex
-#	sed -i 's/{l}6\\end/{l}\\tt 6\\end/g' ldmt-*.pdf_tex
-#	sed -i 's/{l}7\\end/{l}\\tt 7\\end/g' ldmt-*.pdf_tex
-#	sed -i 's/{l}8\\end/{l}\\tt 8\\end/g' ldmt-*.pdf_tex
-#	sed -i 's/{l}9\\end/{l}\\tt 9\\end/g' ldmt-*.pdf_tex
 	sed -i 's/\\textbf{= 120/\\footnotesize \\tt {= 120/' ldmt-*.pdf_tex
 	sed -i 's/\[t\]{c}\\textit{3}/\[t\]{c}\\textit{\\scriptsize 3}/g' ldmt-*.pdf_tex
 
