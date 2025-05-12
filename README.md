@@ -1,10 +1,7 @@
 ## mdgBookSVG8Kit
 
-[... UNDER CONSTRUCTION ... ]  
-
-
-
 **Here's an opportunity for one to "compose" Minuets and to author a Collection Book of such!!!** 
+![](./ldmt-minuet.svg)  
 
 This folder contains materials that allow the user to author a book containing a collection of [Musical Dice Games (MDG)](https://en.wikipedia.org/wiki/Musikalisches_W%C3%BCrfelspiel) minuets, generated based on the rules given in [*Ludus Melothedicus 2nd ed. (1759)*](https://imslp.org/wiki/Ludus_Melothedicus_(Anonymous)).  
 

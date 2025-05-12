@@ -1,9 +1,9 @@
 #!/bin/bash
 #===================================================================================
 #
-#	 FILE:	mdg82mid+svg.sh
+#	 FILE:	ldmt2mid+svg.sh
 #
-#	USAGE:	mdg82mid+svg.sh n1 n2 n3 n4 n5 n6 n7 n8 n9 n10 n11 n12 n13 n14 n15 16
+#	USAGE:	ldmt2mid+svg.sh n1 n2 n3 n4 n5 n6 n7 n8 n9 n10 n11 n12 n13 n14 n15 16
 #
 #		where n1-n16 are any of the 9 possible integers from the set {1,2, 3, 4, 5, 6, 7, 8, 9}
 #
@@ -11,7 +11,7 @@
 #		of a particular Musical Dice Game (MDG) minuet based on Ludus Melothedicus
 #
 #      AUTHOR:	J.L.A. Uro (justineuro@gmail.com)
-#     VERSION:	0.0.1
+#     VERSION:	0.0.0
 #     LICENSE:	Creative Commons Attribution 4.0 International License (CC-BY)
 #     CREATED:	2025/05/05 16:20:33
 #    REVISION:	2025/05/11 19:25:07
@@ -99,11 +99,24 @@ filen="ldmt-$fileInd.abc"
 
 #-----------------------------------------------------------------------------------------------------
 # calculate permutation number for the current dice toss (from 9^8*9^8 = 1,853,020,188,851,841 possibilities)
-# Unique: 9^7*7 * 9^7*6 = 960,825,283,108,362
-# part I, measure 8: 1=5, 2=7
+# Unique: 9^6*8*7 * 9^7*6 = 854,066,918,318,544 
+# part I, measure 4: 2=3; measure 8: 1=5, 2=7
 # part II, measure 8: 1=6, 2=7, 4=9
 #-----------------------------------------------------------------------------------------------------
-dbNum=$(( 1 + (${diceS1[0]}-1) + (${diceS1[1]}-1)*9 + (${diceS1[2]}-1)*9**2 + (${diceS1[3]}-1)*9**3 + (${diceS1[4]}-1)*9**4 + (${diceS1[5]}-1)*9**5 + (${diceS1[6]}-1)*9**6 + (${diceS1[7]}-1)*9**7 + (${diceS2[0]}-1)*9**8 + (${diceS2[1]}-1)*9**9 + (${diceS2[2]}-1)*9**10 + (${diceS2[3]}-1)*9**11 + (${diceS2[4]}-1)*9**12 + (${diceS2[5]}-1)*9**13 + (${diceS2[6]}-1)*9**14 + (${diceS2[7]}-1)*9**15 ))
+# adjust count for bar 4 for rolls beyond 3 (only 8 unique bars)
+if [ "${diceS1[3]}" -gt "2" ]; then diceS1[3]=${diceS1[3]}-1; fi
+# adjust count for bar 8 for rolls after 5 (only 7 unique bars)
+if [ "${diceS1[7]}" = "5" ]; then diceS1[7]=1; fi
+if [ "${diceS1[7]}" = "6" ]; then diceS1[7]=5; fi
+if [ "${diceS1[7]}" = "7" ]; then diceS1[7]=2; fi
+if [ "${diceS1[7]}" = "8" ]; then diceS1[7]=6; fi
+if [ "${diceS1[7]}" = "9" ]; then diceS1[7]=7; fi
+# adjust count for bar 16 for rolls after 6 (only 6 unique bars)
+if [ "${diceS2[7]}" = "6" ]; then diceS2[7]=1; fi
+if [ "${diceS2[7]}" = "7" ]; then diceS2[7]=2; fi
+if [ "${diceS2[7]}" = "8" ]; then diceS2[7]=6; fi
+if [ "${diceS2[7]}" = "9" ]; then diceS2[7]=4; fi
+dbNum=$(( 1 + (${diceS1[0]}-1) + (${diceS1[1]}-1)*9 + (${diceS1[2]}-1)*9**2 + (${diceS1[3]}-1)*9**3 + (${diceS1[4]}-1)*8*9**3 + (${diceS1[5]}-1)*8*9**4 + (${diceS1[6]}-1)*8*9**5 + (${diceS1[7]}-1)*8*9**6 + (${diceS2[0]}-1)*8*7*9**6 + (${diceS2[1]}-1)*8*7*9**7 + (${diceS2[2]}-1)*8*7*9**8 + (${diceS2[3]}-1)*8*7*9**9 + (${diceS2[4]}-1)*8*7*9**10 + (${diceS2[5]}-1)*8*7*9**11 + (${diceS2[6]}-1)*8*7*9**12 + (${diceS2[7]}-1)*8*7*9**13 ))
 echo $dbNum
 
 #----------------------------------------------------------------------------------
