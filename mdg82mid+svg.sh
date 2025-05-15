@@ -104,20 +104,23 @@ filen="ldmt-$fileInd.abc"
 # part II, measure 8: 1=6, 2=7, 4=9
 #-----------------------------------------------------------------------------------------------------
 # adjust count for bar 4 for rolls beyond 3 (only 8 unique bars)
-if [ "${diceS1[3]}" -gt "2" ]; then diceS1_3=${diceS1[3]}-1; fi
+if [ "${diceS1[3]}" -gt "2" ]; then diceS1[3]=${diceS1[3]}-1; fi
 # adjust count for bar 8 for rolls after 5 (only 7 unique bars)
-if [ "${diceS1[7]}" = "5" ]; then diceS1_7=1; fi
-if [ "${diceS1[7]}" = "6" ]; then diceS1_7=5; fi
-if [ "${diceS1[7]}" = "7" ]; then diceS1_7=2; fi
-if [ "${diceS1[7]}" = "8" ]; then diceS1_7=6; fi
-if [ "${diceS1[7]}" = "9" ]; then diceS1_7=7; fi
+if [ "${diceS1[7]}" = "5" ]; then diceS1[7]=1; fi
+if [ "${diceS1[7]}" = "6" ]; then diceS1[7]=5; fi
+if [ "${diceS1[7]}" = "7" ]; then diceS1[7]=2; fi
+if [ "${diceS1[7]}" = "8" ]; then diceS1[7]=6; fi
+if [ "${diceS1[7]}" = "9" ]; then diceS1[7]=7; fi
 # adjust count for bar 16 for rolls after 6 (only 6 unique bars)
-if [ "${diceS2[7]}" = "6" ]; then diceS2_7=1; fi
-if [ "${diceS2[7]}" = "7" ]; then diceS2_7=2; fi
-if [ "${diceS2[7]}" = "8" ]; then diceS2_7=6; fi
-if [ "${diceS2[7]}" = "9" ]; then diceS2_7=4; fi
-dbNum=$(( 1 + (${diceS1[0]}-1) + (${diceS1[1]}-1)*9 + (${diceS1[2]}-1)*9**2 + (${diceS1_3}-1)*9**3 + (${diceS1[4]}-1)*8*9**3 + (${diceS1[5]}-1)*8*9**4 + (${diceS1[6]}-1)*8*9**5 + (${diceS1_7}-1)*8*9**6 + (${diceS2[0]}-1)*8*7*9**6 + (${diceS2[1]}-1)*8*7*9**7 + (${diceS2[2]}-1)*8*7*9**8 + (${diceS2[3]}-1)*8*7*9**9 + (${diceS2[4]}-1)*8*7*9**10 + (${diceS2[5]}-1)*8*7*9**11 + (${diceS2[6]}-1)*8*7*9**12 + (${diceS2_7}-1)*8*7*9**13 ))
+if [ "${diceS2[7]}" = "6" ]; then diceS2[7]=1; fi
+if [ "${diceS2[7]}" = "7" ]; then diceS2[7]=2; fi
+if [ "${diceS2[7]}" = "8" ]; then diceS2[7]=6; fi
+if [ "${diceS2[7]}" = "9" ]; then diceS2[7]=4; fi
+dbNum=$(( 1 + (${diceS1[0]}-1) + (${diceS1[1]}-1)*9 + (${diceS1[2]}-1)*9**2 + (${diceS1[3]}-1)*9**3 + (${diceS1[4]}-1)*8*9**3 + (${diceS1[5]}-1)*8*9**4 + (${diceS1[6]}-1)*8*9**5 + (${diceS1[7]}-1)*8*9**6 + (${diceS2[0]}-1)*8*7*9**6 + (${diceS2[1]}-1)*8*7*9**7 + (${diceS2[2]}-1)*8*7*9**8 + (${diceS2[3]}-1)*8*7*9**9 + (${diceS2[4]}-1)*8*7*9**10 + (${diceS2[5]}-1)*8*7*9**11 + (${diceS2[6]}-1)*8*7*9**12 + (${diceS2[7]}-1)*8*7*9**13 ))
 echo $dbNum
+
+# restore original toss values
+diceS1[3]=$4; diceS1[7]=$8; diceS2[7]=${16}; 
 
 
 #----------------------------------------------------------------------------------
