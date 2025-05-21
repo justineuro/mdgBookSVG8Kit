@@ -1,9 +1,9 @@
 ## mdgBookSVG8Kit
 
-**Here's an opportunity for one to "compose" Minuets and to author a Collection Book of such!!!** 
+**Here's an opportunity for one to "compose" Minuets and to author a Collection Book of such!!!**  
 ![](./ldmt-minuet.svg)  
 
-**[Audio sample: &nbsp; [ogg](https://justineuro.github.io/mdgBookSVG8Kit/ldmt-0-sample.ogg) &nbsp;&nbsp; [midi](https://justineuro.github.io/mdgBookSVG8Kit/ldmt-sample-0.mid)]**  
+**[Audio sample: &nbsp; [ogg](https://justineuro.github.io/mdgBookSVG8Kit/ldmt-minuet.ogg) &nbsp;&nbsp; [midi](https://justineuro.github.io/mdgBookSVG8Kit/ldmt-minuet.mid)]**  
 
 This folder contains materials that allow the user to author a book containing a collection of [Musical Dice Games (MDG)](https://en.wikipedia.org/wiki/Musikalisches_W%C3%BCrfelspiel) minuets, generated based on the rules given in [*Ludus Melothedicus 2nd ed. (1759)*](https://imslp.org/wiki/Ludus_Melothedicus_(Anonymous)).  
 
@@ -21,7 +21,13 @@ To download and examine an example of a book (`mdgBookSVG8v1.pdf`) that was gene
 
 [![Front Cover](./mdgBookSVG8v1-tit.png)](https://justineuro.github.io/mdgBookSVG8Kit/mdgBookSVG8v1.pdf)
 
-(**Note**: To enable the MIDI audio links in the book, one should download [ldmt-v1-midi.zip](https://justineuro.github.io/mdgBookSVG8Kit/ldmt-v1-midis.zip) and unzip in the same directory in one's computer that contains the book, i.e., the book and midi files have to be in the same directory).
+(**Note**: To enable the MIDI audio links in the book, one should download [ldmt-v1-midi.zip](https://justineuro.github.io/mdgBookSVG8Kit/ldmt-v1-midis.zip) and unzip in the same directory in one's computer that contains the book, i.e., the book and midi files have to be in the same directory).  
+
+#### Another example
+
+![](./ldmt-sample-0.svg.png)  
+
+**[Audio sample: &nbsp; [ogg](https://justineuro.github.io/mdgBookSVG8Kit/ldmt-sample-0.ogg) &nbsp;&nbsp; [midi](https://justineuro.github.io/mdgBookSVG8Kit/ldmt-sample-0.mid)]**  
 
 
 ## Similar Kits (by the same author) on GitHub
