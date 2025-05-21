@@ -25,7 +25,7 @@ To download and examine an example of a book (`mdgBookSVG8v1.pdf`) that was gene
 
 #### Another example
 
-![](./ldmt-sample-0.svg.png)  
+![](./ldmt-sample-0.svg)  
 
 **[Audio sample: &nbsp; [ogg](https://justineuro.github.io/mdgBookSVG8Kit/ldmt-sample-0.ogg) &nbsp;&nbsp; [midi](https://justineuro.github.io/mdgBookSVG8Kit/ldmt-sample-0.mid)]**  
 
