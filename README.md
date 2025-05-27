@@ -30,6 +30,13 @@ To download and examine an example of a book (`mdgBookSVG8v1.pdf`) that was gene
 **[Audio sample: &nbsp; [ogg](https://justineuro.github.io/mdgBookSVG8Kit/ldmt-sample-0.ogg) &nbsp;&nbsp; [midi](https://justineuro.github.io/mdgBookSVG8Kit/ldmt-sample-0.mid)]**  
 
 
+## Supplementary Materials 
+
+- [`mdg8a2mid+svg.sh`](./mdg8a2mid+svg.sh) - a bash script that can be used for generating `ABC`,`SVG`, and `MIDI` files for a particular Musical Dice Game (MDG) minuets in the Key of A minor (en A mi La) based on the rules of [*Ludus Melothedicus 2nd ed. (1759)*](https://imslp.org/wiki/Ludus_Melothedicus_(Anonymous)); this is similar to [`mdg82mid+svg.sh`](./mdg82mid+svg.sh), a bash script that is used for generating minuets in the Key of D (en D la Re)
+- four (4) spreadsheets used for obtaining the Table of Measures (`ludus9-data-*.ods`) for Keys of D and A minor
+- `ABC` and corresponding `PDF` files containing the Table of Measures for minuets in Key of A minor (there is a possibility that there are errors in the tables for Part II - Measures 3 and 8 that appear in the original publication); [`ludus-part1-A.abc`](./ludus-part1-A.abc), [`ludus-part2-A.abc`](./ludus-part2-A.abc), [`Ludus Melothedicus-en A mi la-I.pdf`](./Ludus%20Melothedicus-en%20A%20mi%20la-I.pdf), and [`Ludus Melothedicus-en A mi la-II.pdf`](./Ludus%20Melothedicus-en%20A%20mi%20la-II.pdf)
+
+
 ## Similar Kits (by the same author) on GitHub
 MDG Book kits similar to this may be found on related GitHub sites such as:
 
