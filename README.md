@@ -1,4 +1,4 @@
-## mdgBookSVG8Kit
+# mdgBookSVG8Kit
 
 **Here's an opportunity for one to "compose" Minuets and to author a Collection Book of such!!!**  
 ![](./ldmt-minuet.svg)  
@@ -30,6 +30,24 @@ To download and examine an example of a book (`mdgBookSVG8v1.pdf`) that was gene
 **[Audio sample: &nbsp; [ogg](https://justineuro.github.io/mdgBookSVG8Kit/ldmt-sample-0.ogg) &nbsp;&nbsp; [midi](https://justineuro.github.io/mdgBookSVG8Kit/ldmt-sample-0.mid)]**  
 
 
+## Important Parameters
+To personalize one's generated book (in addition to the randomly generated minuets), one may want to change some of the default parameters/values in the following (all three files are initially found in the main directory but are eventually moved into the `res` folder): 
+
+- `mdgBookSVG8v1.tex` - (main latex file) see lines 37-47; also, one may have to occasionally change the \\topmargin and \\textheight values in lines 320 and 321, to ensure that each audio MIDI file will be on the same page as the corresponding musical score
+- `mdgBookSVG8v1-cover.tex`- makes the cover of the book; see lines 37-47 of `mdgBookSVG8v1.tex` for default values
+- `hyperref.cfg` - contains the `\hypersetup` keyvalues; one may wish to change the default value of `pdfauthor`, among other keyvalues; see the documentation for the TeX package `hyperref` for more information on these keyvalues.
+
+Once the desired changes have been made to the files above, one can then re-compile the book by issuing, in the `res` subdirectory, the last set of commands in the HOWTO file:
+```shell
+pdflatex -synctex=1 -interaction=nonstopmode -shell-escape mdgBookSVG8v1.tex
+bibtex mdgBookSVG8v1.aux
+pdflatex -synctex=1 -interaction=nonstopmode -shell-escape mdgBookSVG8v1.tex
+pdflatex -synctex=1 -interaction=nonstopmode -shell-escape mdgBookSVG8v1.tex
+```
+
+Also, line 33 of the `HOWTO` is set by default so that each new book created contains 50 minuets.  One may wish to change this number, as desired, to some other counting number.  This has to be done before issuing the `bash HOWTO` command within the `mdgBookSVG8Kit-main` directory.
+
+
 ## Supplementary Materials 
 
 - [`mdg8a2mid+svg.sh`](./mdg8a2mid+svg.sh) - a bash script that can be used for generating `ABC`,`SVG`, and `MIDI` files for particular Musical Dice Game (MDG) minuets in the Key of A minor (en A mi La) based on the rules of [*Ludus Melothedicus 2nd ed. (1759)*](https://imslp.org/wiki/Ludus_Melothedicus_(Anonymous)); this is similar to [`mdg82mid+svg.sh`](./mdg82mid+svg.sh), a bash script that is used for generating minuets in the Key of D (en D la Re)
@@ -44,6 +62,7 @@ To download and examine an example of a book (`mdgBookSVG8v1.pdf`) that was gene
 
 
 
+
 ## Similar Kits (by the same author) on GitHub
 MDG Book kits similar to this may be found on related GitHub sites such as:
 
@@ -55,6 +74,7 @@ MDG Book kits similar to this may be found on related GitHub sites such as:
 - [mdgBookSVG4itKit](https://github.com/justineuro/mdgBookSVG4itKit) - MDG based on [*Gioco Filarmonico o sia maniera facile per comporre un infinito numero di menuetti e trio, anche senza sapere il contrapunto*](http://imslp.org/wiki/Table_pour_composer_des_Minuets_et_des_Trios_%C3%A0_la_infinie_(Stadler,_Maximilian)); similar to  [mdgBookSVG4Kit](https://github.com/justineuro/mdgBookSVG4Kit) but arranged for three (3) instruments
 - [mdgBookSVG6Kit](https://justineuro.github.io/mdgBookSVG6Kit) - One-Command Kit for Creating MDG Scottish Dances (Dance-Trios) Collection Book, each dance-trio is generated based on the rules given in [*Kunst, Schottische Taenze zu componiren, ohne musicalisch zu sein*](https://imslp.org/wiki/Kunst%2C_Schottische_Taenze_zu_componiren%2C_ohne_musicalisch_zu_sein_(Gerlach%2C_Gustav))
 - [mdgBookSVG7Kit](https://justineuro.github.io/mdgBookSVG7Kit) - One-Command Kit for Creating MDG Rondos Collection Book, each rondo is generated based on the rules given in [_L'art de composer de la musique sans en connaître les éléments - 5th Cahier 2nd Ed. (1802)_](https://s9.imslp.org/files/imglnks/usimg/6/63/IMSLP653334-PMLP1047762-L'Art_de_composer_de_la_-...-Calegari_Antonio_bpt6k9617931c.pdf)
+- [mdgBookSVG10Kit](https://justineuro.github.io/mdgBookSVG10Kit) - One-Command Kit for Creating MDG Minuets-Trios Collection Book, the minuets and trios generated based on the rules given in [*Musicalische Cabala (ca. 1773)*](https://imslp.org/wiki/Musicalische_Cabala_(Schola%2C_Franciscus)) by Franciscus Schola  
 
 
 ## Acknowledgments
